@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.splashscreen {
+    /* background-color: red; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.loader {
+    animation: loading infinite 2000ms;
+    color: white;
+}
+
+
+@keyframes loading {
+    to { transform: rotate(360deg); }
+}
+
+#root {
+    display: flex;
+}
+nav {
+    width: 100px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.screen {
+    width: calc(100vw - 100px);
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.svg-icon {
+    transition: all 200ms;
+}
+
+.svg-icon:hover {
+    transform: scale(1.1, 1.1);
+    filter: drop-shadow(3px 5px 2px #141414);
+}
